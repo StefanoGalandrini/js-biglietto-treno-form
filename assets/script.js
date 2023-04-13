@@ -25,15 +25,15 @@
 */
 
 // declare variables for final output
-const firstName = document.querySelector('#first-name');
-const lastName = document.querySelector('#last-name');
-const distance = document.querySelector('#distance');
-const age = document.querySelector('#age');
+const firstName = document.querySelector('#first-name').value;
+const lastName = document.querySelector('#last-name').value;
+const distance = parseFloat(document.querySelector('#distance').value);
+const age = parseInt(document.querySelector('#age').value);
 
-console.log(firstName.value);
-console.log(lastName.value);
-console.log(age.value);
-console.log(distance.value);
+console.log(firstName);
+console.log(lastName);
+console.log(age);
+console.log(distance);
 
 let message;
 let discountedPrice20;
