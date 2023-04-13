@@ -1,6 +1,13 @@
 /*
-	- chiedere il numero di Km da percorrere e inserirla nella variabile distance;
-	- chiedere l'età del passeggero e inserirla nella variabile age;
+	- creare un form in cui l'utente inserisca:
+	1) Nome
+	2) Cognome
+	3) Distanza in Km
+	4) età
+	
+	- cliccare per inserire ciascun dato in una costante
+
+	- VERIFICARE:
 	- SE distance e age sono numeri e sono maggiori di 0:
 		- moltiplicare distance per 0.21 e inserire il risultato nella variabile wholePrice;
 		- stampare: "Prezzo pieno: euro" + wholePrice
@@ -18,18 +25,38 @@
 */
 
 // declare variables for final output
-let message = null;
-let discountedPrice20 = null;
-let discountedPrice40 = null;
-let finalPrice = null;
+const firstName = document.querySelector('#first-name');
+const lastName = document.querySelector('#last-name');
+const distance = document.querySelector('#distance');
+const age = document.querySelector('#age');
+
+console.log(firstName.value);
+console.log(lastName.value);
+console.log(age.value);
+console.log(distance.value);
+
+let message;
+let discountedPrice20;
+let discountedPrice40;
+let finalPrice;
 
 // prompt for distance and passenger age
-const distance = parseFloat(prompt('Inserire i Km da percorrere:'));
-const age = parseInt(prompt('Inserire l\'età del passeggero'));
+// const distance = parseFloat(prompt('Inserire i Km da percorrere:'));
+// const age = parseInt(prompt('Inserire l\'età del passeggero'));
+
+document.querySelector(".btn-submit").addEventListener(onclick,
+	function () {
+		console.log("Ciao");
+		console.log(firstName).value;
+		console.log(lastName).value;
+		console.log(distance).value;
+		console.log(age).value;
+	}
+)
+
+
 
 // check values
-document.getElementById('age').innerHTML = age;
-document.getElementById('distance').innerHTML = distance;
 
 // calculate whole price = € 0,21 / Km
 let wholePrice = distance * 0.21;

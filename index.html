@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Biglietto del Treno</title>
+	<title>Form Biglietto del Treno</title>
 	<link rel="stylesheet" href="assets/style.css">
 	<script src="assets/script.js" defer></script>
 </head>
@@ -14,8 +14,26 @@
 	<main>
 		<h1>BIGLIETTO DEL TRENO</h1>
 
+		<form action="">
+			<div class="name">
+				<label for="first-name">Nome:</label>
+				<input type="text" id="first-name" name="name" minlength="3" value="">
+				<label for="last-name">Cognome:</label>
+				<input type="text" id="last-name" name="lastname" minlength="3" value="">
+			</div>
+			<div class="data">
+				<label for="distance">Distanza da percorrere (in Km):</label>
+				<input type="text" id="distance" name="distance" required value="">
+				<label for="age">Età del passeggero:</label>
+				<input type="text" id="age" name="age" required value="">
+			</div>
+			<input type="button" class="btn-submit" value="Calcola">
+		</form>
+
+
+
 		<!-- inseriti valori non validi -->
-		<div class="alert" id="message"></div>
+		<!-- <div class="alert" id="message"></div> -->
 
 
 		<div>Distanza da percorrere: Km
@@ -25,11 +43,11 @@
 			<span id="age"></span>
 		</div>
 
-		<div class="container">
+		<!-- <div class="container">
 			<div class="text" id="def-price1"></div>
 			<div class="text" id="def-price2"></div>
 			<div class="final" id="def-price3"></div>
-		</div>
+		</div> -->
 
 	</main>
 </body>
