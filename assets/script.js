@@ -25,41 +25,41 @@
 */
 
 // declare variables for final output
-const firstName = document.querySelector('#first-name').value;
-const lastName = document.querySelector('#last-name').value;
-const distance = parseFloat(document.querySelector('#distance').value);
-const age = parseInt(document.querySelector('#age').value);
+let firstName;
+let lastName;
+let distance;
+let age;
 
-console.log(firstName);
-console.log(lastName);
-console.log(age);
-console.log(distance);
+// console.log(firstName);
+// console.log(lastName);
+// console.log(age);
+// console.log(distance);
 
 let message;
 let discountedPrice20;
 let discountedPrice40;
 let finalPrice;
 
-// prompt for distance and passenger age
-// const distance = parseFloat(prompt('Inserire i Km da percorrere:'));
-// const age = parseInt(prompt('Inserire l\'età del passeggero'));
-
-document.querySelector(".btn-submit").addEventListener(onclick,
+//Add input to variables
+document.querySelector(".btn-submit").addEventListener("click",
 	function () {
-		console.log("Ciao");
-		console.log(firstName).value;
-		console.log(lastName).value;
-		console.log(distance).value;
-		console.log(age).value;
+		firstName = document.querySelector('#first-name').value;
+		lastName = document.querySelector('#last-name').value;
+		distance = parseFloat(document.querySelector('#distance').value);
+		age = parseInt(document.querySelector('#age').value);
+		// console.log(firstName);
+		// console.log(lastName)
+		console.log(distance);
+		// console.log(age);
 	}
 )
 
 
-
-// check values
-
 // calculate whole price = € 0,21 / Km
 let wholePrice = distance * 0.21;
+
+console.log(wholePrice);
+
 
 /*
 prepare prices to display
