@@ -24,10 +24,8 @@
 	- stampare: "Uno o entrambi i valori inseriti non sono validi"
 */
 
-let message;
 let discountedPrice20;
 let discountedPrice40;
-let finalPrice;
 
 //Add input to variables
 document.querySelector(".btn-submit").addEventListener("click",
@@ -67,32 +65,28 @@ document.querySelector(".btn-submit").addEventListener("click",
 			return;
 		}
 
+		document.querySelector('.p-first-name').innerHTML = firstName;
+		document.querySelector('.p-last-name').innerHTML = lastName;
+		document.querySelector('.p-age').innerHTML = age;
+		document.querySelector('.p-distance').innerHTML = distance;
+		document.querySelector('.p-full-price').innerHTML = wholePrice;
+
 
 		if (age < 18) {
-			defPrice = discountedPrice20;
-			const defPrice1 = `Il prezzo del biglietto è di € ${wholePrice}`;
-			const defPrice2 = `Lo sconto applicato è del 20%`;
-			const defPrice3 = `Il prezzo scontato del biglietto è di € ${defPrice}`;
-			document.getElementById('def-price1').innerHTML = defPrice1;
-			document.getElementById('def-price2').innerHTML = defPrice2;
-			document.getElementById('def-price3').innerHTML = defPrice3;
+			document.querySelector('.p-discount-percent').innerHTML = "20%";
+			document.querySelector('.p-discount-amount').innerHTML = (wholePrice - discountedPrice20).toFixed(2);
+			document.querySelector('.p-discount-price').innerHTML = discountedPrice20;
 
-		} else if (age > 65) {
-			defPrice = discountedPrice40;
-			const defPrice1 = `Il prezzo del biglietto è di € ${wholePrice}`;
-			const defPrice2 = `Lo sconto applicato è del 40%`;
-			const defPrice3 = `Il prezzo scontato del biglietto è di € ${defPrice}`;
-			document.getElementById('def-price1').innerHTML = defPrice1;
-			document.getElementById('def-price2').innerHTML = defPrice2;
-			document.getElementById('def-price3').innerHTML = defPrice3;
+		} else if (age >= 65) {
+			document.querySelector('.p-discount-percent').innerHTML = "40%";
+			document.querySelector('.p-discount-amount').innerHTML = (wholePrice - discountedPrice40).toFixed(2);
+			document.querySelector('.p-discount-price').innerHTML = discountedPrice40;
+
 
 		} else {
-			const defPrice1 = ``;
-			const defPrice2 = `Non si ha diritto a sconti`;
-			const defPrice3 = `Il prezzo del biglietto è di € ${wholePrice}`;
-			document.getElementById('def-price1').innerHTML = defPrice1;
-			document.getElementById('def-price2').innerHTML = defPrice2;
-			document.getElementById('def-price3').innerHTML = defPrice3;
+			document.querySelector('.p-discount-percent').innerHTML = "0%";
+			document.querySelector('.p-discount-amount').innerHTML = "0";
+			document.querySelector('.p-discount-price').innerHTML = wholePrice;
 		}
 	}
 )

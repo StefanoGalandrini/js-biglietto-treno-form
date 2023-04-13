@@ -26,7 +26,7 @@ main {
 }
 
 .container {
-	max-width: 60vw;
+	max-width: 70vw;
 	min-height: 50%;
 	margin: 3rem auto;
 	display: flex;
@@ -42,7 +42,7 @@ main {
 
 h1,
 h3 {
-	margin-bottom: 3rem;
+	margin-bottom: 1.5rem;
 	text-align: center;
 }
 
@@ -84,12 +84,12 @@ h1 {
 	border-radius: 10rem;
 	padding: 0.75em 2.5em;
 	color: white;
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	letter-spacing: 4px;
 	font-weight: semibold;
 	text-transform: uppercase;
 	cursor: pointer;
-	margin: 3rem 2rem;
+	margin: 1.5rem 1rem;
 }
 
 .btn-reset {
@@ -100,12 +100,12 @@ h1 {
 	border-radius: 10rem;
 	padding: 0.75em 2.5em;
 	color: black;
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	letter-spacing: 4px;
 	font-weight: semibold;
 	text-transform: uppercase;
 	cursor: pointer;
-	margin: 3rem 2rem;
+	margin: 1.5rem 1rem;
 }
 
 .visible {
@@ -119,17 +119,37 @@ h1 {
 .invalid,
 .negative {
 	color: maroon;
+	text-align: center;
+	font-size: 2.5rem;
 }
 
-.text {
-	font-weight: bold;
-	line-height: 2rem;
-}
-
-.final {
-	font-size: 1.5rem;
+.ticket {
+	width: 60%;
+	box-shadow: 2px 2px 5px #555555;
+	background-image: url(../img/paper-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 5px dotted rgb(122, 100, 71);
+	padding: 1rem;
+	margin: 1rem auto;
+	font-size: 1.15rem;
+	font-weight: normal;
 	line-height: 3rem;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.ticket .passenger {
+	flex: 0 0 60%
+}
+
+.ticket .prices {
+	flex: 0 0 40%
+}
+
+.summary span {
+	font-size: 1.25rem;
 	font-weight: bold;
-	color: rgb(0, 48, 0);
-	text-decoration: underline;
 }
