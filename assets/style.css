@@ -27,7 +27,7 @@ main {
 
 .container {
 	max-width: 60vw;
-	height: 50%;
+	min-height: 50%;
 	margin: 3rem auto;
 	display: flex;
 	flex-direction: column;
@@ -89,7 +89,23 @@ h1 {
 	font-weight: semibold;
 	text-transform: uppercase;
 	cursor: pointer;
-	margin: 3rem auto;
+	margin: 3rem 2rem;
+}
+
+.btn-reset {
+	outline: none;
+	background-color: #bbbbbb;
+	padding: 1rem 1.5rem;
+	border: 0;
+	border-radius: 10rem;
+	padding: 0.75em 2.5em;
+	color: black;
+	font-size: 1.5rem;
+	letter-spacing: 4px;
+	font-weight: semibold;
+	text-transform: uppercase;
+	cursor: pointer;
+	margin: 3rem 2rem;
 }
 
 .visible {

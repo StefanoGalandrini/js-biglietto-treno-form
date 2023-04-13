@@ -64,7 +64,6 @@ document.querySelector(".btn-submit").addEventListener("click",
 			const negative = document.querySelector('.negative');
 			negative.classList.remove("invisible");
 			negative.classList.add("visible");
-			console.log("sono qui")
 			return;
 		}
 
@@ -95,5 +94,21 @@ document.querySelector(".btn-submit").addEventListener("click",
 			document.getElementById('def-price2').innerHTML = defPrice2;
 			document.getElementById('def-price3').innerHTML = defPrice3;
 		}
+	}
+)
+
+document.querySelector(".btn-reset").addEventListener("click",
+	function () {
+		document.querySelector('#first-name').value = "";
+		document.querySelector('#last-name').value = "";
+		document.querySelector('#distance').value = "";
+		document.querySelector('#age').value = "";
+		const invalid = document.querySelector('.invalid');
+		invalid.classList.remove("visible");
+		invalid.classList.add("invisible");
+		const negative = document.querySelector('.negative');
+		negative.classList.remove("visible");
+		negative.classList.add("invisible");
+		return;
 	}
 )
