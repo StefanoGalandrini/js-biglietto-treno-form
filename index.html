@@ -12,41 +12,54 @@
 
 <body>
 	<main>
-		<h1>BIGLIETTO DEL TRENO</h1>
+		<div class="container">
+			<h1>PREPARATI A PARTIRE!</h1>
+			<h3>Calcola il costo del tuo biglietto</h3>
 
-		<div class="name">
-			<label for="first-name">Nome:</label>
-			<input type="text" id="first-name" name="name" placeholder=" " minlength="3" value="">
-			<label for="last-name">Cognome:</label>
-			<input type="text" id="last-name" name="lastname" minlength="3" value="">
+			<div class="input-data">
+				<div>
+					<label for="first-name">Nome:</label>
+					<input type="text" id="first-name" name="name" placeholder="Nome" minlength="3" value="">
+				</div>
+				<div>
+					<label for="last-name">Cognome:</label>
+					<input type="text" id="last-name" name="lastname" placeholder="Cognome" minlength="3" value="">
+				</div>
+				<div>
+					<label for="distance">Distanza (in Km):</label>
+					<input type="text" id="distance" name="distance" placeholder="Distanza (Km)" required value="">
+				</div>
+				<div>
+					<label for="age">Età del passeggero:</label>
+					<input type="text" id="age" name="age" placeholder="Età" required value="">
+				</div>
+			</div>
+			<input type="button" class="btn-submit" value="Calcola">
+
+
+
+			<!-- inseriti valori non validi -->
+			<div class="invalid invisible">
+				Uno o entrambi i valori inseriti non sono validi!
+			</div>
+
+			<!-- inseriti valori non validi -->
+			<div class="negative invisible">
+				Entrambi i valori inseriti devono essere maggiori di zero!
+			</div>
+
+
+
+
+			<div>Distanza da percorrere: Km
+				<span id="distance"></span>
+			</div>
+			<div>Età del passeggero: anni
+				<span id="age"></span>
+			</div>
+
+
 		</div>
-		<div class="data">
-			<label for="distance">Distanza da percorrere (in Km):</label>
-			<input type="text" id="distance" name="distance" required value="">
-			<label for="age">Età del passeggero:</label>
-			<input type="text" id="age" name="age" required value="">
-		</div>
-		<input type="button" class="btn-submit" value="Calcola">
-
-
-
-		<!-- inseriti valori non validi -->
-		<!-- <div class="alert" id="message"></div> -->
-
-
-		<div>Distanza da percorrere: Km
-			<span id="distance"></span>
-		</div>
-		<div>Età del passeggero: anni
-			<span id="age"></span>
-		</div>
-
-		<!-- <div class="container">
-			<div class="text" id="def-price1"></div>
-			<div class="text" id="def-price2"></div>
-			<div class="final" id="def-price3"></div>
-		</div> -->
-
 	</main>
 </body>
 
